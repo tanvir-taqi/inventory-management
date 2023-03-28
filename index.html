@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System</title>
+    <script src="https://kit.fontawesome.com/1d0b6863f2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+
+            <a href="#" class="logo">Inventory Management System</a>
+            <button class="toggle-button"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+    <aside>
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#inventory">Inventory</a></li>
+                <li><a href="#reports">Reports</a></li>
+                <li><a href="#settings">Settings</a></li>
+                <li><a href="#help">Help</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <section class="welcome">
+
+            <h1>Welcome to the iPhone Inventory Management System!</h1>
+            <p>Here you can easily manage your inventory and keep track of all your sales data. Our user-friendly
+                dashboard provides a quick overview of your inventory levels, making it easier for you to make informed
+                decisions. Take control of your inventory today!</p>
+        </section>
+
+        <!-- ============  dashboard =========  -->
+        <section class="dashboard-container">
+            <div class="dashboard">
+                <div class="dashboard-item">
+                    <h2>Inventory Levels</h2>
+                    <p class="number">250</p>
+                </div>
+                <div class="dashboard-item">
+                    <h2>Sales</h2>
+                    <p class="number">$50,000</p>
+                </div>
+                <div class="dashboard-item">
+                    <h2>Top Models</h2>
+                    <ul>
+                        <li>iPhone 13 Pro Max</li>
+                        <li>iPhone 12 Pro</li>
+                        <li>iPhone SE</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="low-stock-alerts">
+                <h2>Low Stock Alerts</h2>
+                <ul>
+                    <li>
+                        <h3>iPhone X</h3>
+                        <p class="stock-level">Stock level: 5</p>
+                        <p class="alert-message">Only a few left in stock!</p>
+                    </li>
+                    <li>
+                        <h3>iPhone 11 Pro</h3>
+                        <p class="stock-level">Stock level: 3</p>
+                        <p class="alert-message">Running low on stock!</p>
+                    </li>
+                    <li>
+                        <h3>iPhone 12</h3>
+                        <p class="stock-level">Stock level: 0</p>
+                        <p class="alert-message out-of-stock">Out of stock!</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- ============ inventory section============  -->
+        <section id="inventory">
+            <h2 class="inventory-section-title">Inventory</h2>
+            <div class="new-model">
+                <form class="form-add-model">
+                    <h2>Add New Model</h2>
+                    
+                    <div class="form-group">
+                      <label for="name">Model Name:</label>
+                      <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="image">Model Image URL:</label>
+                      <input type="file" id="image" name="image" required>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="details">Model Details:</label>
+                      <textarea id="details" name="details" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="price">Price:</label>
+                      <input type="number" id="price" name="price" step="0.01" min="0" required>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="release-date">Release Date:</label>
+                      <input type="date" id="release-date" name="release-date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="stock-level">Stock Level:</label>
+                      <input type="number" id="stock-level" name="stock-level" min="0" required>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="discount">Discount (%):</label>
+                      <input type="number" id="discount" name="discount" min="0" max="100" step="1" required>
+                    </div>
+                    
+                    <button type="submit">Add Model</button>
+                  </form>
+                  
+            </div>
+            <div>
+                <div class="inventory-section">
+                    <div class="card card-title-box">
+                        <h2 class="inventory-section-title">Current Models <span><i class="fas fa-arrow-right"></i></span></h2>
+
+                    </div>
+               
+                    <div class="card">
+                      <img src="./images/1-removebg-preview.png" alt="iPhone Model 1">
+                      <h3 class="card-title">iPhone 14 Pro Max</h3>
+                      <p class="card-info">Release Date: Jan 2021</p>
+                      <p class="card-info">Price: $999</p>
+                      <p class="card-info">Discount: 10%</p>
+                      <p class="card-info">Current Price: $899</p>
+                      <p class="card-info">Stock Available: 50</p>
+                      <div class="card-actions">
+                        <div>
+                            <label>Add Stock:</label>
+                            <input type="number" min="0" max="100">
+                            <button>Add</button>
+                        </div>
+                        <div>
+                            <label>Add Discount:</label>
+                            <input type="number" min="0" max="100">
+                            <button>Add(%) </button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="./images/2-removebg-preview.png" alt="iPhone Model 1">
+                      <h3 class="card-title">iPhone 14 Plus</h3>
+                      <p class="card-info">Release Date: Jan 2021</p>
+                      <p class="card-info">Price: $999</p>
+                      <p class="card-info">Discount: 10%</p>
+                      <p class="card-info">Current Price: $899</p>
+                      <p class="card-info">Stock Available: 50</p>
+                      <div class="card-actions">
+                        <div>
+                            <label>Add Stock:</label>
+                            <input type="number" min="0" max="100">
+                            <button>Add</button>
+                        </div>
+                        <div>
+                            <label>Add Discount:</label>
+                            <input type="number" min="0" max="100">
+                            <button>Add(%) </button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="./images/3-removebg-preview.png" alt="iPhone Model 1">
+                      <h3 class="card-title">iPhone SE (3rd generation)</h3>
+                      <p class="card-info">Release Date: Jan 2021</p>
+                      <p class="card-info">Price: $999</p>
+                      <p class="card-info">Discount: 10%</p>
+                      <p class="card-info">Current Price: $899</p>
+                      <p class="card-info">Stock Available: 50</p>
+                      <div class="card-actions">
+                        <div>
+                            <label>Add Stock:</label>
+                            <input type="number" min="0" max="100">
+                            <button>Add</button>
+                        </div>
+                        <div>
+                            <label>Add Discount:</label>
+                            <input type="number" min="0" max="100">
+                            <button>Add(%) </button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="./images/4-removebg-preview.png" alt="iPhone Model 1">
+                      <h3 class="card-title">iPhone 13 Pro Max</h3>
+                      <p class="card-info">Release Date: Jan 2021</p>
+                      <p class="card-info">Price: $999</p>
+                      <p class="card-info">Discount: 10%</p>
+                      <p class="card-info">Current Price: $899</p>
+                      <p class="card-info">Stock Available: 50</p>
+                      <div class="card-actions">
+                        <div>
+                            <label>Add Stock:</label>
+                            <input type="number" min="0" max="100">
+                            <button>Add</button>
+                        </div>
+                        <div>
+                            <label>Add Discount:</label>
+                            <input type="number" min="0" max="100">
+                            <button>Add(%) </button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="./images/5-removebg-preview.png" alt="iPhone Model 1">
+                      <h3 class="card-title">iPhone 13 Pro</h3>
+                      <p class="card-info">Release Date: Jan 2021</p>
+                      <p class="card-info">Price: $999</p>
+                      <p class="card-info">Discount: 10%</p>
+                      <p class="card-info">Current Price: $899</p>
+                      <p class="card-info">Stock Available: 50</p>
+                      <div class="card-actions">
+                        <div>
+                            <label>Add Stock:</label>
+                            <input type="number" min="0" max="100">
+                            <button>Add</button>
+                        </div>
+                        <div>
+                            <label>Add Discount:</label>
+                            <input type="number" min="0" max="100">
+                            <button>Add(%) </button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="./images/1-removebg-preview.png" alt="iPhone Model 1">
+                      <h3 class="card-title">iPhone 12 Pro</h3>
+                      <p class="card-info">Release Date: Jan 2021</p>
+                      <p class="card-info">Price: $999</p>
+                      <p class="card-info">Discount: 10%</p>
+                      <p class="card-info">Current Price: $899</p>
+                      <p class="card-info">Stock Available: 50</p>
+                      <div class="card-actions">
+                        <div>
+                            <label>Add Stock:</label>
+                            <input type="number" min="0" max="100">
+                            <button>Add</button>
+                        </div>
+                        <div>
+                            <label>Add Discount:</label>
+                            <input type="number" min="0" max="100">
+                            <button>Add(%) </button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="./images/2-removebg-preview.png" alt="iPhone Model 1">
+                      <h3 class="card-title">iPhone 12</h3>
+                      <p class="card-info">Release Date: Jan 2021</p>
+                      <p class="card-info">Price: $999</p>
+                      <p class="card-info">Discount: 10%</p>
+                      <p class="card-info">Current Price: $899</p>
+                      <p class="card-info">Stock Available: 50</p>
+                      <div class="card-actions">
+                        <div>
+                            <label>Add Stock:</label>
+                            <input type="number" min="0" max="100">
+                            <button>Add</button>
+                        </div>
+                        <div>
+                            <label>Add Discount:</label>
+                            <input type="number" min="0" max="100">
+                            <button>Add(%) </button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="./images/3-removebg-preview.png" alt="iPhone Model 1">
+                      <h3 class="card-title">iPhone 11</h3>
+                      <p class="card-info">Release Date: Jan 2021</p>
+                      <p class="card-info">Price: $999</p>
+                      <p class="card-info">Discount: 10%</p>
+                      <p class="card-info">Current Price: $899</p>
+                      <p class="card-info">Stock Available: 50</p>
+                      <div class="card-actions">
+                        <div>
+                            <label>Add Stock:</label>
+                            <input type="number" min="0" max="100">
+                            <button>Add</button>
+                        </div>
+                        <div>
+                            <label>Add Discount:</label>
+                            <input type="number" min="0" max="100">
+                            <button>Add(%) </button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="./images/4-removebg-preview.png" alt="iPhone Model 1">
+                      <h3 class="card-title">iPhone XS</h3>
+                      <p class="card-info">Release Date: Jan 2021</p>
+                      <p class="card-info">Price: $999</p>
+                      <p class="card-info">Discount: 10%</p>
+                      <p class="card-info">Current Price: $899</p>
+                      <p class="card-info">Stock Available: 50</p>
+                      <div class="card-actions">
+                        <div>
+                            <label>Add Stock:</label>
+                            <input type="number" min="0" max="100">
+                            <button>Add</button>
+                        </div>
+                        <div>
+                            <label>Add Discount:</label>
+                            <input type="number" min="0" max="100">
+                            <button>Add(%) </button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img src="./images/5-removebg-preview.png" alt="iPhone Model 1">
+                      <h3 class="card-title">iPhone X</h3>
+                      <p class="card-info">Release Date: Jan 2021</p>
+                      <p class="card-info">Price: $999</p>
+                      <p class="card-info">Discount: 10%</p>
+                      <p class="card-info">Current Price: $899</p>
+                      <p class="card-info">Stock Available: 50</p>
+                      <div class="card-actions">
+                        <div>
+                            <label>Add Stock:</label>
+                            <input type="number" min="0" max="100">
+                            <button>Add</button>
+                        </div>
+                        <div>
+                            <label>Add Discount:</label>
+                            <input type="number" min="0" max="100">
+                            <button>Add(%) </button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                   
+                    
+                  </div>
+            </div>
+            
+              
+        </section>
+
+        <!-- ============= reports ============  -->
+        <!-- HTML code for Sales Report section -->
+        <section class="" id="reports">
+            <div class="sales-report">
+                <h2>Sales Report</h2>
+                <div class="sales-color-indicator-container">
+                    <div>
+                        <span class="extra-ordinary"></span>
+                        <h5>Extra Ordinary</h5>
+                    </div>
+                    <div>
+                        <span class="satisfacory"></span>
+                        <h5>Satisfactory</h5>
+                    </div>
+                    <div>
+                        <span class="should-improve"></span>
+                        <h5>Should Improve</h5>
+                    </div>
+                   
+                </div>
+                <div class="sales-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>iPhone Model</th>
+                                <th>Units Sold</th>
+                                <th>Revenue Generated</th>
+                                <th>Profit Margin</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>iPhone 14 Pro Max</td>
+                                <td>120</td>
+                                <td>$120,000</td>
+                                <td>20%</td>
+                            </tr>
+                            <tr>
+                                <td>iPhone 14 Plus</td>
+                                <td>80</td>
+                                <td>$100,000</td>
+                                <td>25%</td>
+                            </tr>
+                            <tr>
+                                <td>iPhone SE (3rd generation)</td>
+                                <td>100</td>
+                                <td>$80,000</td>
+                                <td>18%</td>
+                            </tr>
+                            <tr>
+                                <td>iPhone 13 Pro Max</td>
+                                <td>50</td>
+                                <td>$30,000</td>
+                                <td>15%</td>
+                            </tr>
+                            <tr>
+                                <td>iPhone 13 Pro</td>
+                                <td>120</td>
+                                <td>$120,000</td>
+                                <td>20%</td>
+                            </tr>
+                            <tr>
+                                <td>iPhone 12 Pro</td>
+                                <td>80</td>
+                                <td>$100,000</td>
+                                <td>25%</td>
+                            </tr>
+                            <tr>
+                                <td>iPhone 12</td>
+                                <td>100</td>
+                                <td>$80,000</td>
+                                <td>18%</td>
+                            </tr>
+                            <tr>
+                                <td>iPhone 11</td>
+                                <td>50</td>
+                                <td>$30,000</td>
+                                <td>15%</td>
+                            </tr>
+                            <tr>
+                                <td>iPhone XS</td>
+                                <td>100</td>
+                                <td>$80,000</td>
+                                <td>18%</td>
+                            </tr>
+                            <tr>
+                                <td>iPhone X</td>
+                                <td>50</td>
+                                <td>$30,000</td>
+                                <td>15%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="performance-report">
+                <h2 class="performance-report__title">Performance Report</h2>
+                <div class="performance-report__metrics">
+                    <div class="performance-report__metric">
+                        <h3 class="performance-report__metric-title">Inventory Turnover</h3>
+                        <p class="performance-report__metric-value">5.2</p>
+                    </div>
+                    <div class="performance-report__metric">
+                        <h3 class="performance-report__metric-title">Days of Inventory on Hand</h3>
+                        <p class="performance-report__metric-value">22</p>
+                    </div>
+                    <div class="performance-report__metric">
+                        <h3 class="performance-report__metric-title">Performance Indicator 1</h3>
+                        <p class="performance-report__metric-value">75%</p>
+                    </div>
+                    <div class="performance-report__metric">
+                        <h3 class="performance-report__metric-title">Performance Indicator 2</h3>
+                        <p class="performance-report__metric-value">90%</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- ===== settings =======  -->
+        <section class="settings-section" id="settings">
+            <h2 class="settings-section-title">Settings</h2>
+            <form class="settings-form">
+                <h3 class="settings-form-title">Notification Settings</h3>
+                <div class="settings-form-field">
+                    <label for="email-alerts">Email Alerts</label>
+                    <input type="checkbox" id="email-alerts" name="email-alerts">
+                </div>
+                <div class="settings-form-field">
+                    <label for="sms-alerts">SMS Alerts</label>
+                    <input type="checkbox" id="sms-alerts" name="sms-alerts">
+                </div>
+                <div class="settings-form-field">
+                    <label for="alert-threshold">Alert Threshold</label>
+                    <input type="number" id="alert-threshold" name="alert-threshold" min="0" max="100" step="1">
+                    <span>%</span>
+                </div>
+                <h3 class="settings-form-title">Language Settings</h3>
+                <div class="settings-form-field">
+                    <label for="language">Language</label>
+                    <select id="language" name="language">
+                        <option value="english">English</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="french">French</option>
+                    </select>
+                </div>
+                <div class="settings-form-field">
+                    <label for="timezone">Timezone</label>
+                    <select id="timezone" name="timezone">
+                        <option value="pacific">Pacific Time (US & Canada)</option>
+                        <option value="mountain">Mountain Time (US & Canada)</option>
+                        <option value="central">Central Time (US & Canada)</option>
+                        <option value="eastern">Eastern Time (US & Canada)</option>
+                    </select>
+                </div>
+                <button type="submit">Save Changes</button>
+            </form>
+        </section>
+
+
+        <!-- ================ help ===========  -->
+        <section class="help-section" id="help">
+            <h2 class="help-section-title">Help</h2>
+            <div class="help-section-questions">
+                <h3 class="help-question">How do I add new iPhone models to the inventory?</h3>
+                <p class="help-answer">To add a new iPhone model to the inventory, navigate to the Inventory Management
+                    section and click on the "Add New Model" button. Fill in the required fields, including the model
+                    name, description, and initial stock level. Then click "Save" to add the new model to the inventory.
+                </p>
+                <p class="help-answer">If you need to update the stock level for an existing model, simply navigate to
+                    the Inventory Management section, locate the model you want to update, and click on the "Edit"
+                    button. You can then update the stock level and click "Save" to update the inventory.</p>
+            </div>
+            <div class="help-section-questions">
+                <h3 class="help-question">How do I track the inventory levels for each iPhone model?</h3>
+                <p class="help-answer">To view the inventory levels for each iPhone model, navigate to the Inventory
+                    Management section and locate the model you want to view. The current stock level will be displayed
+                    next to the model name. You can also view the inventory history for the model, including sales and
+                    restocks, by clicking on the model name.</p>
+                <p class="help-answer">If you need to set alerts for low stock levels, navigate to the Alerts section
+                    and click on the "Add Alert" button. Choose the iPhone model and the stock level threshold, and
+                    click "Save" to set the alert. You will receive an email notification when the stock level falls
+                    below the threshold.</p>
+            </div>
+            <div class="help-section-questions">
+                <h3 class="help-question">How do I generate sales reports?</h3>
+                <p class="help-answer">To generate a sales report, navigate to the Sales Report section and select the
+                    desired date range. The report will display the number of iPhone models sold, the revenue generated
+                    from the sales, and other related metrics. You can export the report as a CSV file by clicking on
+                    the "Export" button.</p>
+                <p class="help-answer">If you need to view the sales data for a specific iPhone model, click on the
+                    model name in the report. This will display the sales history for the model, including the date,
+                    quantity sold, and revenue generated.</p>
+            </div>
+            <div class="help-section-questions">
+                <h3 class="help-question">How do I delete an iPhone model from the inventory?</h3>
+                <p class="help-answer">To delete an iPhone model from the inventory, navigate to the Inventory
+                    Management section and locate the model you want to delete. Click on the "Delete" button and confirm
+                    the deletion. Note that this action cannot be undone.</p>
+            </div>
+            <div class="help-section-questions">
+                <h3 class="help-question">How do I adjust the stock level for an iPhone model?</h3>
+                <p class="help-answer">To adjust the stock level for an iPhone model, navigate to the Inventory
+                    Management section and locate the model you want to update. Click on the "Edit" button and update
+                    the stock level field. You can also add a note to the inventory history for the update. Click "Save"
+                    to update the inventory.</p>
+            </div>
+            <div class="help-section-questions">
+                <h3 class="help-question">How do I view the inventory history for an iPhone model?</h3>
+                <p class="help-answer">To view the inventory history for an iPhone model, navigate to the Inventory
+                    Management section and locate the model you want to view. Click on the model name to view the
+                    inventory history, which includes sales, restocks, and adjustments to the stock level.</p>
+            </div>
+            <div class="help-section-questions">
+                <h3 class="help-question">How do I set up email alerts for low stock levels?</h3>
+                <p class="help-answer">To set up email alerts for low stock levels, navigate to the Alerts section and
+                    click on the "Add Alert" button. Choose the iPhone model and the stock level threshold, and enter
+                    the email address where you want to receive the alerts. Click "Save" to set up the alert.</p>
+            </div>
+            <div class="help-section-questions">
+                <h3 class="help-question">How do I export the inventory data as a CSV file?</h3>
+                <p class="help-answer">To export the inventory data as a CSV file, navigate to the Inventory Management
+                    section and click on the "Export" button. Choose the data range you want to export and click
+                    "Export" to download the CSV file. You can then open the file in a spreadsheet program such as
+                    Microsoft Excel or Google Sheets.</p>
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+    <script src="./scripts/app.js"></script>
+</body>
+
+</html>
