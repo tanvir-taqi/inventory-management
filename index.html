@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventory Management System</title>
+    <link rel="shortcut icon" href="./images/inventory.png" type="image/x-icon">
+    <!-- ====== fontawesome =========  -->
     <script src="https://kit.fontawesome.com/1d0b6863f2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
@@ -87,279 +89,280 @@
             <div class="new-model">
                 <form class="form-add-model">
                     <h2>Add New Model</h2>
-                    
+
                     <div class="form-group">
-                      <label for="name">Model Name:</label>
-                      <input type="text" id="name" name="name" required>
+                        <label for="name">Model Name:</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
-                    
+
                     <div class="form-group">
-                      <label for="image">Model Image URL:</label>
-                      <input type="file" id="image" name="image" required>
+                        <label for="image">Model Image URL:</label>
+                        <input type="file" id="image" name="image" required>
                     </div>
-                    
+
                     <div class="form-group">
-                      <label for="details">Model Details:</label>
-                      <textarea id="details" name="details" required></textarea>
+                        <label for="details">Model Details:</label>
+                        <textarea id="details" name="details" required></textarea>
                     </div>
-                    
+
                     <div class="form-group">
-                      <label for="price">Price:</label>
-                      <input type="number" id="price" name="price" step="0.01" min="0" required>
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" name="price" step="0.01" min="0" required>
                     </div>
-                    
+
                     <div class="form-group">
-                      <label for="release-date">Release Date:</label>
-                      <input type="date" id="release-date" name="release-date" required>
+                        <label for="release-date">Release Date:</label>
+                        <input type="date" id="release-date" name="release-date" required>
                     </div>
-                    
+
                     <div class="form-group">
-                      <label for="stock-level">Stock Level:</label>
-                      <input type="number" id="stock-level" name="stock-level" min="0" required>
+                        <label for="stock-level">Stock Level:</label>
+                        <input type="number" id="stock-level" name="stock-level" min="0" required>
                     </div>
-                    
+
                     <div class="form-group">
-                      <label for="discount">Discount (%):</label>
-                      <input type="number" id="discount" name="discount" min="0" max="100" step="1" required>
+                        <label for="discount">Discount (%):</label>
+                        <input type="number" id="discount" name="discount" min="0" max="100" step="1" required>
                     </div>
-                    
+
                     <button type="submit">Add Model</button>
-                  </form>
-                  
+                </form>
+
             </div>
             <div>
                 <div class="inventory-section">
                     <div class="card card-title-box">
-                        <h2 class="inventory-section-title">Current Models <span><i class="fas fa-arrow-right"></i></span></h2>
+                        <h2 class="inventory-section-title">Current Models <span><i
+                                    class="fas fa-arrow-right"></i></span></h2>
 
                     </div>
-               
+
                     <div class="card">
-                      <img src="./images/1-removebg-preview.png" alt="iPhone Model 1">
-                      <h3 class="card-title">iPhone 14 Pro Max</h3>
-                      <p class="card-info">Release Date: Jan 2021</p>
-                      <p class="card-info">Price: $999</p>
-                      <p class="card-info">Discount: 10%</p>
-                      <p class="card-info">Current Price: $899</p>
-                      <p class="card-info">Stock Available: 50</p>
-                      <div class="card-actions">
-                        <div>
-                            <label>Add Stock:</label>
-                            <input type="number" min="0" max="100">
-                            <button>Add</button>
+                        <img src="./images/1-removebg-preview.png" alt="iPhone Model 1">
+                        <h3 class="card-title">iPhone 14 Pro Max</h3>
+                        <p class="card-info">Release Date: Jan 2021</p>
+                        <p class="card-info">Price: $999</p>
+                        <p class="card-info">Discount: 10%</p>
+                        <p class="card-info">Current Price: $899</p>
+                        <p class="card-info">Stock Available: 50</p>
+                        <div class="card-actions">
+                            <div>
+                                <label>Add Stock:</label>
+                                <input type="number" min="0" max="100">
+                                <button>Add</button>
+                            </div>
+                            <div>
+                                <label>Add Discount:</label>
+                                <input type="number" min="0" max="100">
+                                <button>Add(%) </button>
+                            </div>
+
                         </div>
-                        <div>
-                            <label>Add Discount:</label>
-                            <input type="number" min="0" max="100">
-                            <button>Add(%) </button>
-                        </div>
-                        
-                      </div>
                     </div>
                     <div class="card">
-                      <img src="./images/2-removebg-preview.png" alt="iPhone Model 1">
-                      <h3 class="card-title">iPhone 14 Plus</h3>
-                      <p class="card-info">Release Date: Jan 2021</p>
-                      <p class="card-info">Price: $999</p>
-                      <p class="card-info">Discount: 10%</p>
-                      <p class="card-info">Current Price: $899</p>
-                      <p class="card-info">Stock Available: 50</p>
-                      <div class="card-actions">
-                        <div>
-                            <label>Add Stock:</label>
-                            <input type="number" min="0" max="100">
-                            <button>Add</button>
+                        <img src="./images/2-removebg-preview.png" alt="iPhone Model 1">
+                        <h3 class="card-title">iPhone 14 Plus</h3>
+                        <p class="card-info">Release Date: Jan 2021</p>
+                        <p class="card-info">Price: $999</p>
+                        <p class="card-info">Discount: 10%</p>
+                        <p class="card-info">Current Price: $899</p>
+                        <p class="card-info">Stock Available: 50</p>
+                        <div class="card-actions">
+                            <div>
+                                <label>Add Stock:</label>
+                                <input type="number" min="0" max="100">
+                                <button>Add</button>
+                            </div>
+                            <div>
+                                <label>Add Discount:</label>
+                                <input type="number" min="0" max="100">
+                                <button>Add(%) </button>
+                            </div>
+
                         </div>
-                        <div>
-                            <label>Add Discount:</label>
-                            <input type="number" min="0" max="100">
-                            <button>Add(%) </button>
-                        </div>
-                        
-                      </div>
                     </div>
                     <div class="card">
-                      <img src="./images/3-removebg-preview.png" alt="iPhone Model 1">
-                      <h3 class="card-title">iPhone SE (3rd generation)</h3>
-                      <p class="card-info">Release Date: Jan 2021</p>
-                      <p class="card-info">Price: $999</p>
-                      <p class="card-info">Discount: 10%</p>
-                      <p class="card-info">Current Price: $899</p>
-                      <p class="card-info">Stock Available: 50</p>
-                      <div class="card-actions">
-                        <div>
-                            <label>Add Stock:</label>
-                            <input type="number" min="0" max="100">
-                            <button>Add</button>
+                        <img src="./images/3-removebg-preview.png" alt="iPhone Model 1">
+                        <h3 class="card-title">iPhone SE (3rd generation)</h3>
+                        <p class="card-info">Release Date: Jan 2021</p>
+                        <p class="card-info">Price: $999</p>
+                        <p class="card-info">Discount: 10%</p>
+                        <p class="card-info">Current Price: $899</p>
+                        <p class="card-info">Stock Available: 50</p>
+                        <div class="card-actions">
+                            <div>
+                                <label>Add Stock:</label>
+                                <input type="number" min="0" max="100">
+                                <button>Add</button>
+                            </div>
+                            <div>
+                                <label>Add Discount:</label>
+                                <input type="number" min="0" max="100">
+                                <button>Add(%) </button>
+                            </div>
+
                         </div>
-                        <div>
-                            <label>Add Discount:</label>
-                            <input type="number" min="0" max="100">
-                            <button>Add(%) </button>
-                        </div>
-                        
-                      </div>
                     </div>
                     <div class="card">
-                      <img src="./images/4-removebg-preview.png" alt="iPhone Model 1">
-                      <h3 class="card-title">iPhone 13 Pro Max</h3>
-                      <p class="card-info">Release Date: Jan 2021</p>
-                      <p class="card-info">Price: $999</p>
-                      <p class="card-info">Discount: 10%</p>
-                      <p class="card-info">Current Price: $899</p>
-                      <p class="card-info">Stock Available: 50</p>
-                      <div class="card-actions">
-                        <div>
-                            <label>Add Stock:</label>
-                            <input type="number" min="0" max="100">
-                            <button>Add</button>
+                        <img src="./images/4-removebg-preview.png" alt="iPhone Model 1">
+                        <h3 class="card-title">iPhone 13 Pro Max</h3>
+                        <p class="card-info">Release Date: Jan 2021</p>
+                        <p class="card-info">Price: $999</p>
+                        <p class="card-info">Discount: 10%</p>
+                        <p class="card-info">Current Price: $899</p>
+                        <p class="card-info">Stock Available: 50</p>
+                        <div class="card-actions">
+                            <div>
+                                <label>Add Stock:</label>
+                                <input type="number" min="0" max="100">
+                                <button>Add</button>
+                            </div>
+                            <div>
+                                <label>Add Discount:</label>
+                                <input type="number" min="0" max="100">
+                                <button>Add(%) </button>
+                            </div>
+
                         </div>
-                        <div>
-                            <label>Add Discount:</label>
-                            <input type="number" min="0" max="100">
-                            <button>Add(%) </button>
-                        </div>
-                        
-                      </div>
                     </div>
                     <div class="card">
-                      <img src="./images/5-removebg-preview.png" alt="iPhone Model 1">
-                      <h3 class="card-title">iPhone 13 Pro</h3>
-                      <p class="card-info">Release Date: Jan 2021</p>
-                      <p class="card-info">Price: $999</p>
-                      <p class="card-info">Discount: 10%</p>
-                      <p class="card-info">Current Price: $899</p>
-                      <p class="card-info">Stock Available: 50</p>
-                      <div class="card-actions">
-                        <div>
-                            <label>Add Stock:</label>
-                            <input type="number" min="0" max="100">
-                            <button>Add</button>
+                        <img src="./images/5-removebg-preview.png" alt="iPhone Model 1">
+                        <h3 class="card-title">iPhone 13 Pro</h3>
+                        <p class="card-info">Release Date: Jan 2021</p>
+                        <p class="card-info">Price: $999</p>
+                        <p class="card-info">Discount: 10%</p>
+                        <p class="card-info">Current Price: $899</p>
+                        <p class="card-info">Stock Available: 50</p>
+                        <div class="card-actions">
+                            <div>
+                                <label>Add Stock:</label>
+                                <input type="number" min="0" max="100">
+                                <button>Add</button>
+                            </div>
+                            <div>
+                                <label>Add Discount:</label>
+                                <input type="number" min="0" max="100">
+                                <button>Add(%) </button>
+                            </div>
+
                         </div>
-                        <div>
-                            <label>Add Discount:</label>
-                            <input type="number" min="0" max="100">
-                            <button>Add(%) </button>
-                        </div>
-                        
-                      </div>
                     </div>
                     <div class="card">
-                      <img src="./images/1-removebg-preview.png" alt="iPhone Model 1">
-                      <h3 class="card-title">iPhone 12 Pro</h3>
-                      <p class="card-info">Release Date: Jan 2021</p>
-                      <p class="card-info">Price: $999</p>
-                      <p class="card-info">Discount: 10%</p>
-                      <p class="card-info">Current Price: $899</p>
-                      <p class="card-info">Stock Available: 50</p>
-                      <div class="card-actions">
-                        <div>
-                            <label>Add Stock:</label>
-                            <input type="number" min="0" max="100">
-                            <button>Add</button>
+                        <img src="./images/1-removebg-preview.png" alt="iPhone Model 1">
+                        <h3 class="card-title">iPhone 12 Pro</h3>
+                        <p class="card-info">Release Date: Jan 2021</p>
+                        <p class="card-info">Price: $999</p>
+                        <p class="card-info">Discount: 10%</p>
+                        <p class="card-info">Current Price: $899</p>
+                        <p class="card-info">Stock Available: 50</p>
+                        <div class="card-actions">
+                            <div>
+                                <label>Add Stock:</label>
+                                <input type="number" min="0" max="100">
+                                <button>Add</button>
+                            </div>
+                            <div>
+                                <label>Add Discount:</label>
+                                <input type="number" min="0" max="100">
+                                <button>Add(%) </button>
+                            </div>
+
                         </div>
-                        <div>
-                            <label>Add Discount:</label>
-                            <input type="number" min="0" max="100">
-                            <button>Add(%) </button>
-                        </div>
-                        
-                      </div>
                     </div>
                     <div class="card">
-                      <img src="./images/2-removebg-preview.png" alt="iPhone Model 1">
-                      <h3 class="card-title">iPhone 12</h3>
-                      <p class="card-info">Release Date: Jan 2021</p>
-                      <p class="card-info">Price: $999</p>
-                      <p class="card-info">Discount: 10%</p>
-                      <p class="card-info">Current Price: $899</p>
-                      <p class="card-info">Stock Available: 50</p>
-                      <div class="card-actions">
-                        <div>
-                            <label>Add Stock:</label>
-                            <input type="number" min="0" max="100">
-                            <button>Add</button>
+                        <img src="./images/2-removebg-preview.png" alt="iPhone Model 1">
+                        <h3 class="card-title">iPhone 12</h3>
+                        <p class="card-info">Release Date: Jan 2021</p>
+                        <p class="card-info">Price: $999</p>
+                        <p class="card-info">Discount: 10%</p>
+                        <p class="card-info">Current Price: $899</p>
+                        <p class="card-info">Stock Available: 50</p>
+                        <div class="card-actions">
+                            <div>
+                                <label>Add Stock:</label>
+                                <input type="number" min="0" max="100">
+                                <button>Add</button>
+                            </div>
+                            <div>
+                                <label>Add Discount:</label>
+                                <input type="number" min="0" max="100">
+                                <button>Add(%) </button>
+                            </div>
+
                         </div>
-                        <div>
-                            <label>Add Discount:</label>
-                            <input type="number" min="0" max="100">
-                            <button>Add(%) </button>
-                        </div>
-                        
-                      </div>
                     </div>
                     <div class="card">
-                      <img src="./images/3-removebg-preview.png" alt="iPhone Model 1">
-                      <h3 class="card-title">iPhone 11</h3>
-                      <p class="card-info">Release Date: Jan 2021</p>
-                      <p class="card-info">Price: $999</p>
-                      <p class="card-info">Discount: 10%</p>
-                      <p class="card-info">Current Price: $899</p>
-                      <p class="card-info">Stock Available: 50</p>
-                      <div class="card-actions">
-                        <div>
-                            <label>Add Stock:</label>
-                            <input type="number" min="0" max="100">
-                            <button>Add</button>
+                        <img src="./images/3-removebg-preview.png" alt="iPhone Model 1">
+                        <h3 class="card-title">iPhone 11</h3>
+                        <p class="card-info">Release Date: Jan 2021</p>
+                        <p class="card-info">Price: $999</p>
+                        <p class="card-info">Discount: 10%</p>
+                        <p class="card-info">Current Price: $899</p>
+                        <p class="card-info">Stock Available: 50</p>
+                        <div class="card-actions">
+                            <div>
+                                <label>Add Stock:</label>
+                                <input type="number" min="0" max="100">
+                                <button>Add</button>
+                            </div>
+                            <div>
+                                <label>Add Discount:</label>
+                                <input type="number" min="0" max="100">
+                                <button>Add(%) </button>
+                            </div>
+
                         </div>
-                        <div>
-                            <label>Add Discount:</label>
-                            <input type="number" min="0" max="100">
-                            <button>Add(%) </button>
-                        </div>
-                        
-                      </div>
                     </div>
                     <div class="card">
-                      <img src="./images/4-removebg-preview.png" alt="iPhone Model 1">
-                      <h3 class="card-title">iPhone XS</h3>
-                      <p class="card-info">Release Date: Jan 2021</p>
-                      <p class="card-info">Price: $999</p>
-                      <p class="card-info">Discount: 10%</p>
-                      <p class="card-info">Current Price: $899</p>
-                      <p class="card-info">Stock Available: 50</p>
-                      <div class="card-actions">
-                        <div>
-                            <label>Add Stock:</label>
-                            <input type="number" min="0" max="100">
-                            <button>Add</button>
+                        <img src="./images/4-removebg-preview.png" alt="iPhone Model 1">
+                        <h3 class="card-title">iPhone XS</h3>
+                        <p class="card-info">Release Date: Jan 2021</p>
+                        <p class="card-info">Price: $999</p>
+                        <p class="card-info">Discount: 10%</p>
+                        <p class="card-info">Current Price: $899</p>
+                        <p class="card-info">Stock Available: 50</p>
+                        <div class="card-actions">
+                            <div>
+                                <label>Add Stock:</label>
+                                <input type="number" min="0" max="100">
+                                <button>Add</button>
+                            </div>
+                            <div>
+                                <label>Add Discount:</label>
+                                <input type="number" min="0" max="100">
+                                <button>Add(%) </button>
+                            </div>
+
                         </div>
-                        <div>
-                            <label>Add Discount:</label>
-                            <input type="number" min="0" max="100">
-                            <button>Add(%) </button>
-                        </div>
-                        
-                      </div>
                     </div>
                     <div class="card">
-                      <img src="./images/5-removebg-preview.png" alt="iPhone Model 1">
-                      <h3 class="card-title">iPhone X</h3>
-                      <p class="card-info">Release Date: Jan 2021</p>
-                      <p class="card-info">Price: $999</p>
-                      <p class="card-info">Discount: 10%</p>
-                      <p class="card-info">Current Price: $899</p>
-                      <p class="card-info">Stock Available: 50</p>
-                      <div class="card-actions">
-                        <div>
-                            <label>Add Stock:</label>
-                            <input type="number" min="0" max="100">
-                            <button>Add</button>
+                        <img src="./images/5-removebg-preview.png" alt="iPhone Model 1">
+                        <h3 class="card-title">iPhone X</h3>
+                        <p class="card-info">Release Date: Jan 2021</p>
+                        <p class="card-info">Price: $999</p>
+                        <p class="card-info">Discount: 10%</p>
+                        <p class="card-info">Current Price: $899</p>
+                        <p class="card-info">Stock Available: 50</p>
+                        <div class="card-actions">
+                            <div>
+                                <label>Add Stock:</label>
+                                <input type="number" min="0" max="100">
+                                <button>Add</button>
+                            </div>
+                            <div>
+                                <label>Add Discount:</label>
+                                <input type="number" min="0" max="100">
+                                <button>Add(%) </button>
+                            </div>
+
                         </div>
-                        <div>
-                            <label>Add Discount:</label>
-                            <input type="number" min="0" max="100">
-                            <button>Add(%) </button>
-                        </div>
-                        
-                      </div>
                     </div>
-                   
-                    
-                  </div>
+
+
+                </div>
             </div>
-            
-              
+
+
         </section>
 
         <!-- ============= reports ============  -->
@@ -380,7 +383,7 @@
                         <span class="should-improve"></span>
                         <h5>Should Improve</h5>
                     </div>
-                   
+
                 </div>
                 <div class="sales-table">
                     <table>
